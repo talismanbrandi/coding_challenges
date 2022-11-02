@@ -157,7 +157,7 @@ const totalEV = expectedValue[0];
 // Calculate variance, which is calculated by taking the potential scores from the first "tile"
 // Calculating their deviance from the expected value, squaring it, and then multipling by its probability
 // And adding the products.
-const variance = probabilities[0].list.reduce((partialSum, p) => partialSum + (p.value - totalEV)^2 * p.probability, 0);
+const variance = probabilities[0].list.reduce((partialSum, p) => partialSum + (p.value - totalEV)**2 * p.probability, 0);
 // Standard deviation is the square root of variance
 const std = Math.sqrt(variance);
 
